@@ -344,7 +344,7 @@ section#about-me {
 }
 
 /* ================ (max-width: 610px) Mark ============== */
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 768px) {
   /* Main Nav Header */
   header#header {
     position: absolute;
