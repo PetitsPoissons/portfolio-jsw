@@ -1,0 +1,149 @@
+/* ================ (max-width: 900px) Mark ============== */
+@media screen and (max-width: 900px) {
+  /* Showcase / Hero Section */
+  section#showcase {
+    background-position: 70%;
+    align-items: flex-end;
+  }
+  .about-me__timeline ul li div {
+    width: 25rem;
+  }
+  .about-me__timeline ul li:nth-child(even) div {
+    left: -28.4rem;
+  }
+}
+
+/* ================ (max-width: 800px) Mark ============== */
+@media screen and (max-width: 800px) {
+  /* Main Nav Header */
+  header#header {
+    position: absolute;
+  }
+  nav#header__main-nav {
+    width: 30rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -30rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--lime), var(--tr-turquoise));
+    border: none;
+  }
+
+  .clicked {
+    left: 55%;
+  }
+
+  .header__main-nav--hamburger {
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    cursor: pointer;
+    background-color: var(--tr-turquoise);
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .line {
+    width: 100%;
+    height: 0.3rem;
+    background-color: white;
+    border-radius: 0.2rem;
+    transition: all 0.4s ease-in-out;
+  }
+
+  ul.header__main-nav--links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  ul.header__main-nav--links li {
+    margin-bottom: 4vh;
+    margin-left: 6vw;
+  }
+
+  .clicked .line-1 {
+    transform: rotateZ(-405deg) translate(-0.8rem, 0.6rem);
+  }
+
+  .clicked .line-2 {
+    opacity: 0;
+  }
+
+  .clicked .line-3 {
+    transform: rotateZ(405deg) translate(-0.8rem, -0.6rem);
+  }
+
+  ul.header__main-nav--links li {
+    opacity: 0;
+  }
+
+  ul.header__main-nav--links li:nth-child(1) {
+    transition: all 0.5s ease-in-out 0.2s;
+  }
+
+  ul.header__main-nav--links li:nth-child(2) {
+    transition: all 0.5s ease-in-out 0.4s;
+  }
+
+  ul.header__main-nav--links li:nth-child(3) {
+    transition: all 0.5s ease-in-out 0.6s;
+  }
+
+  ul.header__main-nav--links li:nth-child(4) {
+    transition: all 0.5s ease-in-out 0.8s;
+  }
+
+  ul.header__main-nav--links li.fade {
+    opacity: 1;
+  }
+
+  .sticky {
+    display: none;
+  }
+
+  #about-page {
+    margin: 4rem;
+  }
+
+  .about-me__timeline ul {
+    padding: 2rem 0;
+    border: none;
+  }
+
+  .about-me__timeline ul li div {
+    width: 24rem;
+  }
+}
+
+/* ================ (max-width: 600px) Mark ============== */
+@media screen and (max-width: 600px) {
+  #about-page {
+    margin: 2rem;
+  }
+  .about-me__timeline ul {
+    margin: 0 1rem;
+    padding: 2rem 0;
+    border: none;
+  }
+  .about-me__timeline ul li {
+    margin-left: 2rem;
+  }
+  .about-me__timeline ul li div {
+    width: calc(100vw - 15rem);
+  }
+  .about-me__timeline ul li:nth-child(even) div {
+    left: 4rem;
+  }
+  .about-me__timeline ul li:nth-child(even) div:before {
+    left: -1.5rem;
+    border-width: 0.8rem 1.6rem 0.8rem 0;
+    border-color: transparent var(--tr-turquoise) transparent transparent;
+  }
+}
