@@ -56,6 +56,7 @@ body {
   font-family: var(--raleway);
   line-height: 1.8;
   display: flex;
+  overflow-x: hidden;
 }
 
 li {
@@ -91,6 +92,7 @@ div.side-nav__content {
 
 div.side-nav__content--logo img {
   width: calc(3vw + 3vh);
+  height: calc(3vw + 3vh);
   object-fit: cover; /* this is not to lose the aspect ratio of the image */
 }
 
@@ -268,7 +270,171 @@ div.showcase__content {
   transform: scaleX(1);
 }
 
-/* ----------- Work Section ----------- */
+/* ----------- About Me Section ----------- */
+section#about-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background-color: var(--tr-turquoise);
+}
+
+.about-me__content,
+.about-me__timeline {
+  padding: 2rem;
+  /* flex-grow: 1; */
+  width: 50%;
+}
+
+/* .about-me__content {
+  flex-basis: 40 rem;
+} */
+
+/* Blurb */
+.about-me__content--title {
+  font-size: 4rem;
+  padding: 1rem 0;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.about-me__content--title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.3rem;
+  width: 10%;
+  background-color: var(--lime);
+}
+
+.about-me__content--title,
+.about-me__content--para {
+  margin-bottom: 4rem;
+  letter-spacing: 0.2rem;
+}
+
+.about-me__content--para {
+  font-size: 1.8rem;
+  font-family: var(--indie-flower);
+  color: var(--lime);
+  padding-right: 3rem;
+}
+
+.about-me__content--link:link,
+.about-me__content--link:visited {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.about-me__content--link:link::after,
+.about-me__content--link:visited::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 105%;
+  background: linear-gradient(
+    0.25turn,
+    var(--tr-turquoise),
+    var(--lime),
+    var(--tr-turquoise)
+  );
+  transform: scaleX(0);
+  transition: transform 0.45s;
+  z-index: -1;
+}
+
+.about-me__content--link:hover::after,
+.about-me__content--link:active::after {
+  transform: scaleX(1);
+}
+
+/* Timeline */
+.about-me__timeline ul {
+  background: var(--tr-turquoise);
+  padding: 2.5rem 0;
+}
+
+.about-me__timeline ul li {
+  /* create line */
+  list-style: none;
+  position: relative;
+  width: 0.6rem;
+  margin: 0 auto;
+  padding-top: 2rem;
+  background: white;
+}
+
+.about-me__timeline ul li div {
+  /* boxes */
+  position: relative;
+  bottom: 0;
+  width: 21vw;
+  padding: 1rem;
+  background: var(--vert-clair);
+  transition: all 0.5s ease-in-out;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.about-me__timeline ul li:nth-child(odd) div {
+  /* right side */
+  left: 3.5rem;
+}
+
+.about-me__timeline ul li:nth-child(even) div {
+  /* right side */
+  left: -33rem;
+}
+
+.about-me__timeline ul li:after {
+  /* dots */
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--vert-clair);
+  transform: translateX(-50%);
+  border-radius: 50%;
+  transition: background 0.5s ease-in-out;
+}
+
+.about-me__timeline div:before {
+  /* arrows base */
+  content: '';
+  position: absolute;
+  bottom: 0.5rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.about-me__timeline ul li:nth-child(odd) div:before {
+  /* right side arrows */
+  left: -1.5rem;
+  border-width: 0.8rem 1.6rem 0.8rem 0;
+  border-color: transparent var(--vert-clair) transparent transparent;
+}
+
+.about-me__timeline ul li:nth-child(even) div:before {
+  /* left side arrows */
+  right: -1.5rem;
+  border-width: 0.8rem 0 0.8rem 1.6rem;
+  border-color: transparent transparent transparent var(--vert-clair);
+}
+
+/* ----------- Portfolio Section ----------- */
 section#work {
   display: flex;
   flex-wrap: wrap;
@@ -303,97 +469,6 @@ div.work__card img {
 div.work__card img:hover,
 div.work__card img:active {
   filter: sepia(80%);
-}
-
-/* ----------- About Me Section ----------- */
-section#about-me {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 2rem;
-  background-color: var(--tr-dark-turquoise);
-}
-
-.about-me__img,
-.about-me__content {
-  padding: 2rem;
-  flex-grow: 1;
-}
-
-.about-me__content {
-  flex-basis: 40 rem;
-}
-
-.about-me__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.about-me__content--title {
-  font-size: 4rem;
-  padding: 1rem 0;
-  color: white;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.about-me__content--title:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 0.3rem;
-  width: 10%;
-  background-color: var(--lime);
-}
-
-.about-me__content--title,
-.about-me__content--para {
-  margin-bottom: 4rem;
-  letter-spacing: 0.2rem;
-}
-
-.about-me__content--para {
-  font-size: 1.8rem;
-  font-family: var(--indie-flower);
-  color: var(--lime);
-}
-
-.about-me__content--link:link,
-.about-me__content--link:visited {
-  padding: 1rem 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 1;
-}
-
-.about-me__content--link:link::after,
-.about-me__content--link:visited::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 105%;
-  background: linear-gradient(
-    0.25turn,
-    var(--tr-dark-turquoise),
-    var(--lime),
-    var(--tr-dark-turquoise)
-  );
-  transform: scaleX(0);
-  transition: transform 0.45s;
-  z-index: -1;
-}
-
-.about-me__content--link:hover::after,
-.about-me__content--link:active::after {
-  transform: scaleX(1);
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
