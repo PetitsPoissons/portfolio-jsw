@@ -279,16 +279,13 @@ section#about-me {
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 2rem;
-  background-color: var(--tr-turquoise);
+  background-color: var(--bleu-tres-clair);
 }
 
 .about-me__content {
   padding: 2rem;
   flex-grow: 1;
   width: 100%;
-}
-
-.about-me__content {
   flex-basis: 40 rem;
 }
 
@@ -307,7 +304,7 @@ section#about-me {
   left: 0;
   height: 0.3rem;
   width: 10%;
-  background-color: var(--lime);
+  background-color: var(--tr-dark-turquoise);
 }
 
 .about-me__content--title,
@@ -319,7 +316,7 @@ section#about-me {
 .about-me__content--para {
   font-size: 1.8rem;
   font-family: var(--indie-flower);
-  color: var(--lime);
+  color: var(--tr-dark-turquoise);
   padding-right: 3rem;
 }
 
@@ -341,12 +338,12 @@ section#about-me {
   top: 0;
   left: 0;
   height: 100%;
-  width: 105%;
+  width: 110%;
   background: linear-gradient(
     0.25turn,
-    var(--tr-turquoise),
-    var(--lime),
-    var(--tr-turquoise)
+    var(--bleu-tres-clair),
+    var(--tr-dark-turquoise),
+    var(--bleu-tres-clair)
   );
   transform: scaleX(0);
   transition: transform 0.45s;
@@ -359,38 +356,91 @@ section#about-me {
 }
 
 /* ----------- Portfolio Section ----------- */
-section#work {
+section#portfolio {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: center;
   padding: 2rem;
+  background-color: var(--tr-ash-wood);
+}
+
+.portfolio__content {
+  padding: 2rem;
+  flex-grow: 1;
+  width: 100%;
+  flex-basis: 40 rem;
+}
+
+.portfolio__content--title {
+  font-size: 4rem;
+  padding: 1rem 0;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 4rem;
+  letter-spacing: 0.2rem;
+}
+
+.portfolio__content--title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.3rem;
+  width: 10%;
   background-color: var(--tr-dark-turquoise);
 }
 
-div.work__card {
-  padding: 2rem;
-  flex-basis: 40rem;
-  flex-grow: 1;
-  clip-path: polygon(
-    15% 0%,
-    85% 0%,
-    100% 15%,
-    100% 85%,
-    85% 100%,
-    15% 100%,
-    0% 85%,
-    0% 15%
-  );
+.portfolio__section--cards {
+  padding: calc(1rem + 2vw);
+  background-color: var(--tr-ash-wood);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-div.work__card img {
+.portfolio__section--volunteer-work {
+  display: block;
+}
+
+.portfolio__card {
+  padding: 2vw;
+  flex-basis: 50rem;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__card--img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  transition: filter 0.45s ease;
 }
 
-div.work__card img:hover,
-div.work__card img:active {
-  filter: sepia(80%);
+.portfolio__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.35s ease-in-out;
+}
+
+.portfolio__card--content__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.portfolio__card--content__para {
+  font-family: var(--indie-flower);
+  font-size: 1.5rem;
+}
+
+.portfolio__card--content {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 80%;
+  background-color: rgba(3, 53, 62, 0.7);
+  padding: 1.5rem;
 }
