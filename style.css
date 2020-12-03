@@ -279,7 +279,7 @@ section#about-me {
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 2rem;
-  background-color: var(--bleu-tres-clair);
+  background-color: var(--tr-dark-turquoise);
 }
 
 .about-me__content {
@@ -304,7 +304,7 @@ section#about-me {
   left: 0;
   height: 0.3rem;
   width: 10%;
-  background-color: var(--tr-dark-turquoise);
+  background-color: var(--lime);
 }
 
 .about-me__content--title,
@@ -315,8 +315,8 @@ section#about-me {
 
 .about-me__content--para {
   font-size: 1.8rem;
-  font-family: var(--indie-flower);
-  color: var(--tr-dark-turquoise);
+  font-family: var(--raleway);
+  color: white;
   padding-right: 3rem;
 }
 
@@ -356,13 +356,14 @@ section#about-me {
 }
 
 /* ----------- Portfolio Section ----------- */
+/* General */
 section#portfolio {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 2rem;
-  background-color: var(--tr-ash-wood);
+  background-color: var(--tr-turquoise);
 }
 
 .portfolio__content {
@@ -392,9 +393,48 @@ section#portfolio {
   background-color: var(--tr-dark-turquoise);
 }
 
-.portfolio__section--cards {
+.portfolio__section--title {
+  font-family: var(--indie-flower);
+  font-size: 3rem;
+  font-weight: bolder;
+  color: var(--lime);
+}
+
+/* Mentoring section */
+div.portfolio__section--mentor__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
+
+div.portfolio__section--mentor__card {
+  padding: 2rem;
+  flex-basis: 40rem;
+  flex-grow: 1;
+}
+
+div.portfolio__section--mentor__card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: filter 0.45s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+div.portfolio__section--mentor__card img:hover,
+div.portfolio__section--mentor__card img:active {
+  filter: grayscale(50%);
+  transform: scale(0.98);
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+/* Sports section */
+div.portfolio__section--sports__cards {
   padding: calc(1rem + 2vw);
-  background-color: var(--tr-ash-wood);
+  background-color: var(--tr-turquoise);
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -402,11 +442,7 @@ section#portfolio {
   align-items: center;
 }
 
-.portfolio__section--volunteer-work {
-  display: block;
-}
-
-.portfolio__card {
+div.portfolio--sports__card {
   padding: 2vw;
   flex-basis: 50rem;
   flex-grow: 1;
@@ -414,33 +450,131 @@ section#portfolio {
   overflow: hidden;
 }
 
-.portfolio__card--img {
+div.portfolio--sports__card--img {
   height: 100%;
   width: 100%;
 }
 
-.portfolio__card img {
+div.portfolio--sports__card--img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: all 0.35s ease-in-out;
 }
 
-.portfolio__card--content__title {
-  font-size: 3rem;
-  text-transform: uppercase;
-}
-
-.portfolio__card--content__para {
-  font-family: var(--indie-flower);
-  font-size: 1.5rem;
-}
-
-.portfolio__card--content {
+div.portfolio--sports__card--content {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 0;
   width: 80%;
   background-color: rgba(3, 53, 62, 0.7);
   padding: 1.5rem;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.35s ease-in-out;
+}
+
+.portfolio--sports__card--content__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.portfolio--sports__card--content__para {
+  font-family: var(--raleway);
+  font-size: 1.5rem;
+}
+
+.portfolio--sports__card:hover .portfolio--sports__card--content,
+.portfolio--sports__card:active .portfolio--sports__card--content {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.portfolio--sports__card:hover .portfolio--sports__card--img img,
+.portfolio--sports__card:active .portfolio--sports__card--img img {
+  filter: contrast(50%);
+}
+
+/* ----------- Contact Section ----------- */
+section#contact {
+  height: 100vh;
+  background-image: url('img/phone_withCord.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.contact__content {
+  padding: 2rem;
+  flex-grow: 1;
+  width: 100%;
+  flex-basis: 40 rem;
+}
+
+.contact__content--title {
+  font-size: 4rem;
+  padding: 1rem 0;
+  color: var(--tr-turquoise);
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 4rem;
+  letter-spacing: 0.2rem;
+}
+
+.contact__content--title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.3rem;
+  width: 10%;
+  background-color: var(--sienna);
+}
+
+.contact__content--form {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact__form {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  background-color: var(--tr-dark-turquoise);
+}
+
+.contact__form input,
+.contact__form textarea {
+  color: white;
+  font-family: var(--indie-flower);
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  padding: 2rem;
+  background: transparent;
+  border: none;
+  border-bottom: var(--sienna) solid 0.05rem;
+}
+
+.contact__form textarea {
+  height: 30vh;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.9;
+}
+
+input[type='submit'] {
+  font-family: var(--raleway);
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
 }
