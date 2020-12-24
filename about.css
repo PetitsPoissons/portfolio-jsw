@@ -8,17 +8,17 @@
   margin: 6rem;
 }
 
-.about-me__content--title.about-h2,
-.about-me__content--para.about-p {
+.about-content--title.about-h2,
+.about-content--para.about-p {
   color: var(--tr-dark-turquoise);
 }
 
-.about-me__timeline--title {
+.about-timeline--title {
   font-size: 2.5rem;
   padding: 2rem;
 }
 
-.about-me__timeline ul {
+.about-timeline ul {
   margin: 0 2rem;
   padding: 5rem 0;
   /* flex-grow: 1;
@@ -27,7 +27,7 @@
 }
 
 /* create line */
-.about-me__timeline ul li {
+.about-timeline ul li {
   list-style: none;
   position: relative;
   width: 0.6rem;
@@ -37,7 +37,7 @@
 }
 
 /* boxes */
-.about-me__timeline ul li div {
+.about-timeline ul li div {
   position: relative;
   bottom: 0;
   width: 40rem;
@@ -51,19 +51,19 @@
 }
 
 /* right side */
-.about-me__timeline ul li:nth-child(odd) div {
+.about-timeline ul li:nth-child(odd) div {
   left: 4rem;
   transform: translate(20rem, 0);
 }
 
 /* left side */
-.about-me__timeline ul li:nth-child(even) div {
+.about-timeline ul li:nth-child(even) div {
   left: -43.4rem;
   transform: translate(-20rem, 0);
 }
 
 /* dots */
-.about-me__timeline ul li:after {
+.about-timeline ul li:after {
   content: '';
   position: absolute;
   left: 50%;
@@ -77,7 +77,7 @@
 }
 
 /* arrows base */
-.about-me__timeline div:before {
+.about-timeline div:before {
   content: '';
   position: absolute;
   bottom: 0.5rem;
@@ -87,26 +87,26 @@
 }
 
 /* right side arrows */
-.about-me__timeline ul li:nth-child(odd) div:before {
+.about-timeline ul li:nth-child(odd) div:before {
   left: -1.5rem;
   border-width: 0.8rem 1.6rem 0.8rem 0;
   border-color: transparent var(--tr-turquoise) transparent transparent;
 }
 
 /* left side arrows */
-.about-me__timeline ul li:nth-child(even) div:before {
+.about-timeline ul li:nth-child(even) div:before {
   right: -1.5rem;
   border-width: 0.8rem 0 0.8rem 1.6rem;
   border-color: transparent transparent transparent var(--tr-turquoise);
 }
 
 /* show boxes */
-.about-me__timeline ul li.show div {
+.about-timeline ul li.show div {
   transform: none;
   visibility: visible;
   opacity: 1;
 }
 
-.about-me__timeline ul li.show:after {
+.about-timeline ul li.show:after {
   background: var(--lime);
 }
