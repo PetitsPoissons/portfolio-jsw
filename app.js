@@ -1,7 +1,7 @@
-const hamburgerContainer = document.querySelector('#header__main-nav');
-const hamburger = document.querySelector('.header__main-nav--hamburger');
-const links = document.querySelectorAll('.header__main-nav--links li');
-const items = document.querySelectorAll('.about-me__timeline li');
+const hamburgerContainer = document.querySelector('#header-main-nav');
+const hamburger = document.querySelector('.header-main-nav--hamburger');
+const links = document.querySelectorAll('.header-main-nav--links li');
+const items = document.querySelectorAll('.about-timeline li');
 
 const isInViewport = (el) => {
   const rect = el.getBoundingClientRect();

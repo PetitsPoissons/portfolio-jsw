@@ -183,4 +183,13 @@
   .portfolio--sports-card:active .portfolio--sports-card--content {
     transform-origin: bottom;
   }
+
+  /* Gallery section */
+  .portfolio-section--gallery-text {
+    display: none;
+  }
+
+  .portfolio-section--gallery {
+    display: block;
+  }
 }

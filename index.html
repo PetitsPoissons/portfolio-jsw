@@ -16,6 +16,14 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mobile.css" />
@@ -61,8 +69,7 @@
         <div class="showcase-content">
           <h1 class="showcase-content--title">Juliette Williamson</h1>
           <p class="showcase-content--para">
-            IB Student<br />Mentor & Student Organizer<br />Budding Web
-            Developer
+            IB Student<br />Mentor & Student Leader<br />Budding Web Developer
           </p>
           <div>
             <a href="#portfolio" class="showcase-content--link"
@@ -92,6 +99,8 @@
       <section id="portfolio">
         <div class="portfolio-content">
           <h2 class="portfolio-content--title">Portfolio</h2>
+
+          <!-- SECTION 1: Mentoring & Volunteer Work -->
           <div class="portfolio-section">
             <h3 class="portfolio-section--title">Mentoring & Volunteer Work</h3>
             <div class="portfolio-section--mentor-cards">
@@ -120,7 +129,7 @@
 
               <!-- Peer Mediation -->
               <div class="portfolio-section--mentor-card">
-                <img src="img/PM-logo.jpg" alt="peer-mediation-club" />
+                <img src="img/PM-logo-min.jpg" alt="peer-mediation-club" />
               </div>
 
               <!-- French Club -->
@@ -130,6 +139,7 @@
             </div>
           </div>
 
+          <!-- SECTION 2: Sports -->
           <div class="portfolio-section">
             <h3 class="portfolio-section--title">Sports</h3>
             <div class="portfolio-section--sports-cards">
@@ -164,12 +174,90 @@
             </div>
           </div>
 
+          <!-- SECTION 3: Visual Arts -->
           <div class="portfolio-section">
-            <h3 class="portfolio-section--title">Visual Arts</h3>
+            <h3 class="portfolio-section--title">Visual Arts & Writing</h3>
+            <div class="portfolio-section--gallery">
+              <div
+                id="carouselIndicators"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <ol class="carousel-indicators">
+                  <li
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="1"
+                  ></li>
+                  <li
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="2"
+                  ></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="frame d-block">
+                      <img
+                        src="img/gallery/bear_2020-min.jpg"
+                        class="drawing"
+                        alt="Valentine Teddy Bear"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="frame d-block">
+                      <img
+                        src="img/gallery/chocolates_2020-min.png"
+                        class="drawing"
+                        alt="Valentine Box of Chocolates"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="frame d-block">
+                      <img
+                        src="img/gallery/easter_eggs-min.jpg"
+                        class="drawing"
+                        alt="Easter Eggs Basket"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a
+                  class="carousel-control-prev"
+                  href="#carouselIndicators"
+                  role="button"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </a>
+                <a
+                  class="carousel-control-next"
+                  href="#carouselIndicators"
+                  role="button"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </a>
+              </div>
+            </div>
           </div>
 
+          <!-- SECTION 4: Writing -->
           <div class="portfolio-section">
-            <h3 class="portfolio-section--title">Web Development</h3>
+            <h3 class="portfolio-section--title">Writing</h3>
             <div class="portfolio-section--cards">
               <div class="portfolio-card">
                 <!-- <img src="img/working05.JPG" alt="a-la-carte-biz" /> -->
@@ -195,6 +283,17 @@
         </div>
       </section>
     </main>
+    <!-- JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+      crossorigin="anonymous"
+    ></script>
     <script src="app.js"></script>
   </body>
 </html>

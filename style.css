@@ -341,9 +341,9 @@ section#about {
   width: 110%;
   background: linear-gradient(
     0.25turn,
-    var(--bleu-tres-clair),
     var(--tr-dark-turquoise),
-    var(--bleu-tres-clair)
+    var(--bleu-tres-clair),
+    var(--tr-dark-turquoise)
   );
   transform: scaleX(0);
   transition: transform 0.45s;
@@ -393,28 +393,31 @@ section#portfolio {
   background-color: var(--tr-dark-turquoise);
 }
 
+.portfolio-section {
+  padding: 2rem;
+}
 .portfolio-section--title {
   font-family: var(--indie-flower);
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bolder;
   color: var(--lime);
 }
 
 /* Mentoring section */
-div.portfolio-section--mentor-cards {
+.portfolio-section--mentor-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 2rem;
 }
 
-div.portfolio-section--mentor-card {
+.portfolio-section--mentor-card {
   padding: 2rem;
   flex-basis: 40rem;
   flex-grow: 1;
 }
 
-div.portfolio-section--mentor-card img {
+.portfolio-section--mentor-card img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -423,8 +426,8 @@ div.portfolio-section--mentor-card img {
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-div.portfolio-section--mentor-card img:hover,
-div.portfolio-section--mentor-card img:active {
+.portfolio-section--mentor-card img:hover,
+.portfolio-section--mentor-card img:active {
   filter: grayscale(50%);
   transform: scale(0.98);
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
@@ -432,8 +435,8 @@ div.portfolio-section--mentor-card img:active {
 }
 
 /* Sports section */
-div.portfolio-section--sports-cards {
-  padding: calc(1rem + 2vw);
+.portfolio-section--sports-cards {
+  padding: 2rem;
   background-color: var(--tr-turquoise);
   color: white;
   display: flex;
@@ -442,7 +445,7 @@ div.portfolio-section--sports-cards {
   align-items: center;
 }
 
-div.portfolio--sports-card {
+.portfolio--sports-card {
   padding: 2vw;
   flex-basis: 50rem;
   flex-grow: 1;
@@ -450,19 +453,19 @@ div.portfolio--sports-card {
   overflow: hidden;
 }
 
-div.portfolio--sports-card--img {
+.portfolio--sports-card--img {
   height: 100%;
   width: 100%;
 }
 
-div.portfolio--sports-card--img img {
+.portfolio--sports-card--img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: all 0.35s ease-in-out;
 }
 
-div.portfolio--sports-card--content {
+.portfolio--sports-card--content {
   position: absolute;
   top: 50%;
   left: 0;
@@ -493,6 +496,65 @@ div.portfolio--sports-card--content {
 .portfolio--sports-card:hover .portfolio--sports-card--img img,
 .portfolio--sports-card:active .portfolio--sports-card--img img {
   filter: contrast(50%);
+}
+
+/* Gallery section */
+.portfolio-section--gallery {
+  padding: 2rem;
+}
+
+.drawing {
+  border: solid 2px;
+  border-bottom-color: #ffe;
+  border-left-color: #eed;
+  border-right-color: #eed;
+  border-top-color: #ccb;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.frame {
+  background-color: #ddc;
+  border: solid 5vmin #eee;
+  border-bottom-color: #fff;
+  border-left-color: #eee;
+  border-radius: 2px;
+  border-right-color: #eee;
+  border-top-color: #ddd;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset,
+    0 5px 10px 5px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 5vh auto;
+  height: 90vh;
+  width: 45vw;
+  padding: 7vmin;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+.frame:before {
+  border-radius: 2px;
+  bottom: -2vmin;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25) inset;
+  content: '';
+  left: -2vmin;
+  position: absolute;
+  right: -2vmin;
+  top: -2vmin;
+}
+.frame:after {
+  border-radius: 2px;
+  bottom: -2.5vmin;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  content: '';
+  left: -2.5vmin;
+  position: absolute;
+  right: -2.5vmin;
+  top: -2.5vmin;
+}
+.active {
+  justify-content: center;
 }
 
 /* ----------- Contact Section ----------- */
