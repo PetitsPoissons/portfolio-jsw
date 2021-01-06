@@ -88,6 +88,7 @@ div.side-nav-content {
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   background: linear-gradient(135deg, white 5%, var(--tr-turquoise) 60%);
 }
@@ -98,7 +99,7 @@ div.side-nav-content--logo img {
   object-fit: cover; /* this is not to lose the aspect ratio of the image */
 }
 
-ul.side-nav-content--social {
+div.side-nav-content--social {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -106,15 +107,15 @@ ul.side-nav-content--social {
   justify-content: flex-end;
 }
 
-ul.side-nav-content--social a i {
+div.side-nav-content--social a i {
   font-size: calc(2rem + 0.66667vw); /* dynamic value */
   color: var(--lime);
   padding-bottom: calc(2rem + 0.6667vw);
   transition: color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-ul.side-nav-content--social a i:hover,
-ul.side-nav-content--social a i:active {
+div.side-nav-content--social a i:hover,
+div.side-nav-content--social a i:active {
   color: white;
 }
 
