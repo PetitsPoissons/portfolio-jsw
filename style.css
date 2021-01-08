@@ -205,7 +205,7 @@ div.showcase-content {
   background-color: var(--sienna);
   opacity: 0.75;
   padding: calc(1rem + 2vw);
-  height: calc(12rem + 20vmax);
+  height: calc(12rem + 15vmax);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -417,7 +417,6 @@ section#portfolio {
   flex-basis: 40rem;
   flex-grow: 1;
   position: relative;
-  overflow: hidden;
 }
 
 .mentor-card--img {
@@ -459,8 +458,7 @@ section#portfolio {
   color: var(--tr-dark-turquoise);
   padding: 2rem;
   transform: scale(0);
-  /* transform-origin: bottom; */
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.6s ease-in-out;
 }
 
 .mentor-card--title {
@@ -470,14 +468,27 @@ section#portfolio {
 
 .mentor-card--para {
   font-size: 1.5rem;
+  text-align: left;
+  overflow-y: auto;
 }
 
 .portfolio-section--mentor-card:hover .mentor-card--content,
 .portfolio-section--mentor-card:active .mentor-card--content {
-  transform: scale(0.9);
+  transform: scale(0.93);
   /* transform-origin: top; */
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
     rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+a.mentor-link {
+  text-decoration: none;
+  color: var(--tr-dark-turquoise);
+  font-weight: bolder;
+}
+
+a.mentor-link:hover,
+a.mentor-link:active {
+  color: var(--tr-turquoise);
 }
 
 /* Sports section */
@@ -530,6 +541,7 @@ section#portfolio {
 .portfolio--sports-card--content-para {
   font-family: var(--raleway);
   font-size: 1.5rem;
+  overflow-y: auto;
 }
 
 .portfolio--sports-card:hover .portfolio--sports-card--content,
@@ -541,6 +553,17 @@ section#portfolio {
 .portfolio--sports-card:hover .portfolio--sports-card--img img,
 .portfolio--sports-card:active .portfolio--sports-card--img img {
   filter: contrast(50%);
+}
+
+a.sport-link {
+  text-decoration: none;
+  color: var(--lime);
+  font-weight: bolder;
+}
+
+a.sport-link:hover,
+a.sport-link:active {
+  color: var(--tr-turquoise);
 }
 
 /* Gallery section */

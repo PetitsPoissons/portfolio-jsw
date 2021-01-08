@@ -15,7 +15,7 @@
 
 .about-timeline--title {
   font-size: 2.5rem;
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
 }
 
 .about-timeline ul {
@@ -109,4 +109,8 @@
 
 .about-timeline ul li.show:after {
   background: var(--lime);
+}
+
+.stress {
+  text-decoration: underline;
 }
