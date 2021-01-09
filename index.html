@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- Google Fonts -->
     <link
@@ -516,10 +517,10 @@
         <div class="contact-content">
           <h2 class="contact-content--title">Contact Me</h2>
           <div class="contact-content--form">
-            <form action="" class="contact-form">
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
-              <input type="text" placeholder="Subject" />
+            <form class="contact-form" action="process.php" method="POST">
+              <input type="text" name="name" placeholder="Name" />
+              <input type="email" name="email" placeholder="Email" />
+              <input type="text" name="subject" placeholder="Subject" />
               <textarea name="message" placeholder="Message"></textarea>
               <input type="submit" value="Submit" />
             </form>

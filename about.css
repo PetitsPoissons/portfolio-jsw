@@ -4,7 +4,7 @@
   width: calc(97vw - 3vh);
 }
 
-#about-page {
+.about-page {
   margin: 6rem;
 }
 
@@ -113,4 +113,22 @@
 
 .stress {
   text-decoration: underline;
+}
+
+/* contact link on success page */
+a.contact-link:link,
+a.contact-link:visited {
+  color: var(--tr-turquoise);
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+a.contact-link:hover,
+a.contact-link:active {
+  color: var(--tr-dark-turquoise);
 }
