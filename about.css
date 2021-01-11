@@ -5,7 +5,7 @@
 }
 
 .about-page {
-  margin: 6rem;
+  margin: 2rem 6rem;
 }
 
 .about-content--title.about-h2,
@@ -21,8 +21,8 @@
 .about-timeline ul {
   margin: 0 2rem;
   padding: 5rem 0;
-  /* flex-grow: 1;
-  width: 100%; */
+  flex-grow: 1;
+  width: 100%;
   border: 1px solid var(--tr-dark-turquoise);
 }
 
@@ -73,7 +73,7 @@
   background: inherit;
   transform: translateX(-50%);
   border-radius: 50%;
-  transition: background 0.5s ease-in-out;
+  /* transition: background 0.5s ease-in-out; */
 }
 
 /* arrows base */
@@ -113,6 +113,10 @@
 
 .stress {
   text-decoration: underline;
+}
+
+.lime {
+  color: var(--lime);
 }
 
 /* contact link on success page */
