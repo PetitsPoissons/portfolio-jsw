@@ -190,7 +190,7 @@ ul.header-main-nav--links li a:active::after {
 }
 
 /* ----- Showcase / Hero Section ----- */
-section#showcase {
+#showcase {
   height: 100vh;
   background-image: url('img/juliette3.jpg');
   background-size: cover;
@@ -201,11 +201,11 @@ section#showcase {
   align-items: center;
 }
 
-div.showcase-content {
+.showcase-content {
   background-color: var(--sienna);
   opacity: 0.75;
   padding: calc(1rem + 2vw);
-  height: calc(12rem + 15vmax);
+  height: calc(12rem + 13vmax);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -446,7 +446,7 @@ section#portfolio {
 .mentor-card--content {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   text-align: center;
   position: absolute;
@@ -463,11 +463,13 @@ section#portfolio {
 
 .mentor-card--title {
   font-size: 3rem;
+  padding: 3rem 2rem;
   color: var(--sienna);
 }
 
 .mentor-card--para {
   font-size: 1.5rem;
+  padding: 3rem 2rem;
   text-align: left;
   overflow-y: auto;
 }
@@ -540,7 +542,7 @@ a.mentor-link:active {
 
 .portfolio--sports-card--content-para {
   font-family: var(--raleway);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   overflow-y: auto;
 }
 
@@ -594,8 +596,7 @@ a.sport-link:active {
   box-sizing: border-box;
   display: inline-block;
   margin: 5vh auto;
-  height: 90vh;
-  width: 45vw;
+  width: 50vw;
   padding: 7vmin;
   position: relative;
   text-align: center;
@@ -700,9 +701,18 @@ section#contact {
   height: 30vh;
 }
 
+.contact-form input:active,
+.contact-form input:focus,
+.contact-form textarea:active,
+.contact-form textarea:focus,
+.uneditable-input:focus {
+  background-color: #043f49;
+  outline: 0 none;
+}
+
 ::placeholder {
   color: white;
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 input[type='submit'] {
@@ -710,4 +720,9 @@ input[type='submit'] {
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+}
+
+input[type='submit']:hover,
+input[type='submit']:active {
+  color: var(--lime);
 }

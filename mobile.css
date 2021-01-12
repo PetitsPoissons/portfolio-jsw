@@ -8,6 +8,11 @@
   .about-timeline ul li:nth-child(even) div {
     left: -38.4rem;
   }
+
+  /* Gallery section */
+  .frame {
+    width: 60vw;
+  }
 }
 
 /* ================ (max-width: 1100px) Mark ============= */
@@ -25,8 +30,8 @@
 /* ================ (max-width: 900px) Mark ============== */
 @media screen and (max-width: 900px) {
   /* Showcase / Hero Section */
-  section#showcase {
-    background-position: 70%;
+  #showcase {
+    background-position: 60%;
     align-items: flex-end;
   }
   /* About Me Page */
@@ -35,6 +40,30 @@
   }
   .about-content--para.about-p {
     font-size: 1.5rem;
+  }
+  /* Mentoring Section */
+  .mentor-card--para {
+    font-size: 1.8rem;
+  }
+  /* Gallery Section */
+  .frame {
+    width: 70vw;
+    padding: 3vmin;
+    background-color: var(--tr-dark-turquoise);
+  }
+  /* Sports Section */
+  /* .portfolio--sports-card--content {
+    padding: 0.8rem;
+  } */
+  .portfolio--sports-card--content-title {
+    font-size: 2rem;
+  }
+  .portfolio--sports-card--content-para {
+    font-size: 1.5rem;
+  }
+  /* Contact Section */
+  .contact-form {
+    width: 60vw;
   }
 }
 
@@ -151,13 +180,27 @@
     width: 24rem;
   }
 
+  /* Sports Section */
+  .portfolio--sports-card--content-para {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+}
+/* ================ (max-width: 700px) Mark ============== */
+@media screen and (max-width: 700px) {
   /* Portfolio Section */
-  .portfolio--sports-card--content-title {
-    font-size: calc(1.2rem + 2vw);
+  .portfolio--sports-card--content {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
-  .portfolio--sports-card--content-para {
-    font-size: calc(0.8rem + 1.5vw);
+  .portfolio--sports-card:hover .portfolio--sports-card--content,
+  .portfolio--sports-card:active .portfolio--sports-card--content {
+    transform-origin: bottom;
   }
 }
 
@@ -195,21 +238,6 @@
     border-color: transparent var(--tr-turquoise) transparent transparent;
   }
 
-  /* Portfolio Section */
-  div.portfolio--sports-card--content {
-    top: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  .portfolio--sports-card:hover .portfolio--sports-card--content,
-  .portfolio--sports-card:active .portfolio--sports-card--content {
-    transform-origin: bottom;
-  }
-
   /* Gallery Section */
   .portfolio-section--gallery-text {
     display: none;
@@ -217,5 +245,10 @@
 
   .portfolio-section--gallery {
     display: block;
+  }
+
+  /* Contact Section */
+  .contact-form {
+    width: 70vw;
   }
 }
