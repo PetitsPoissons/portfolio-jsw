@@ -1,3 +1,45 @@
+/* ================ (max-width: 1600px) Mark ============= */
+@media screen and (max-width: 1600px) {
+  /* Sports Section */
+  .portfolio--sports-card--content-para {
+    line-height: 1.6;
+  }
+}
+
+/* ================ (max-width: 1511px) Mark ============= */
+@media screen and (max-width: 1511px) {
+  /* Sports Section */
+  .portfolio--sports-card--content {
+    top: 20%;
+    width: 80%;
+  }
+}
+
+/* ================ (max-width: 1400px) Mark ============= */
+@media screen and (max-width: 1400px) {
+  /* Sports Section */
+  .portfolio--sports-card--content-para {
+    font-size: 1.6rem;
+  }
+}
+
+/* ================ (max-width: 1300px) Mark ============= */
+@media screen and (max-width: 1300px) {
+  /* Sports Section */
+  .portfolio--sports-card--content-para {
+    font-size: 1.5rem;
+  }
+}
+
+/* ================ (max-width: 1230px) Mark ============= */
+@media screen and (max-width: 1230px) {
+  /* Sports Section */
+  .portfolio--sports-card--content {
+    top: 15%;
+    width: 85%;
+  }
+}
+
 /* ================ (max-width: 1200px) Mark ============= */
 @media screen and (max-width: 1200px) {
   /* About Me Page */
@@ -7,6 +49,27 @@
 
   .about-timeline ul li:nth-child(even) div {
     left: -38.4rem;
+  }
+
+  /* Sports Section */
+  .portfolio--sports-card--content {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .portfolio--sports-card:hover .portfolio--sports-card--content,
+  .portfolio--sports-card:active .portfolio--sports-card--content {
+    transform-origin: bottom;
+  }
+
+  .portfolio--sports-card--content-para {
+    font-size: 1.7rem;
+    line-height: 1.6;
+    padding: 5rem;
   }
 
   /* Gallery section */
@@ -45,22 +108,16 @@
   .mentor-card--para {
     font-size: 1.8rem;
   }
+
+  /* Sports Section */
+
   /* Gallery Section */
   .frame {
     width: 70vw;
     padding: 3vmin;
     background-color: var(--tr-dark-turquoise);
   }
-  /* Sports Section */
-  /* .portfolio--sports-card--content {
-    padding: 0.8rem;
-  } */
-  .portfolio--sports-card--content-title {
-    font-size: 2rem;
-  }
-  .portfolio--sports-card--content-para {
-    font-size: 1.5rem;
-  }
+
   /* Contact Section */
   .contact-form {
     width: 60vw;
@@ -184,23 +241,7 @@
   .portfolio--sports-card--content-para {
     font-size: 1.5rem;
     line-height: 1.5;
-  }
-}
-/* ================ (max-width: 700px) Mark ============== */
-@media screen and (max-width: 700px) {
-  /* Portfolio Section */
-  .portfolio--sports-card--content {
-    top: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  .portfolio--sports-card:hover .portfolio--sports-card--content,
-  .portfolio--sports-card:active .portfolio--sports-card--content {
-    transform-origin: bottom;
+    padding: 2.5rem;
   }
 }
 
@@ -236,6 +277,37 @@
     left: -1.5rem;
     border-width: 0.8rem 1.6rem 0.8rem 0;
     border-color: transparent var(--tr-turquoise) transparent transparent;
+  }
+
+  /* Section Titles */
+  .about-content--title,
+  .portfolio-content--title,
+  .contact-content--title {
+    font-size: 3rem;
+  }
+  .about-content--title:after,
+  .portfolio-content--title:after,
+  .contact-content--title:after {
+    width: 20%;
+  }
+  .portfolio-section {
+    padding: 1rem 0;
+  }
+  .portfolio-section--title {
+    font-size: 3rem;
+  }
+  .portfolio-section--gallery {
+    padding: 0;
+  }
+
+  /* Mentor Section */
+  .mentor-card--title {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+  .mentor-card--para {
+    font-size: 1.5rem;
+    line-height: 1.5;
   }
 
   /* Gallery Section */
