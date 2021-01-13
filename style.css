@@ -316,7 +316,8 @@ section#about {
 
 .about-content--para {
   font-size: 1.8rem;
-  font-family: var(--raleway);
+  /* font-family: var(--raleway); */
+  font-family: var(--roboto);
   color: white;
   padding-right: 3rem;
 }
